@@ -1,3 +1,11 @@
+body {
+  background-image: url('./assets/images/noise.svg');
+  background-repeat: repeat;
+  background-size: contain;
+  background-color: hsl(204deg 6% 15%) !important;
+  color: hsl(0deg 0% 100%) !important;
+}
+
 .App {
   text-align: center;
 }
@@ -32,6 +40,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

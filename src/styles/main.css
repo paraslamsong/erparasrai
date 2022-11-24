@@ -1,0 +1,463 @@
+@import url("./fonts.css");
+
+html {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    scroll-behavior: smooth;
+
+}
+
+img {
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #303030;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+
+
+.navlink :hover {
+    background-color: #556070;
+    color: #fff;
+}
+
+#greeting {
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 5.25rem;
+    font-family: 'Work Sans';
+    font-style: normal;
+}
+
+#introduction {
+    margin-top: 1.5rem;
+    margin-bottom: 8.875rem;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: #efefef;
+}
+
+.experience {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    border: 0.0625rem solid #888888;
+    color: #acacac !important;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+}
+
+.exptitle {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-family: 'Work Sans';
+    margin-bottom: 0.5rem;
+}
+
+.expintro {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    text-align: center;
+}
+
+#workbg {
+    padding: 10.5rem 0rem;
+    background: #222;
+}
+
+#worktitle {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: #EfEfEf;
+    margin-bottom: 1.5rem;
+}
+
+#workinformation {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #efefef;
+    margin-bottom: 1.875rem;
+}
+
+.workiconbg {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1.25rem;
+    gap: 0.625rem;
+    width: 4.375rem;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background: #000;
+    border-radius: 0.375rem;
+    margin-bottom: 1.25rem;
+}
+
+.workcontainer {
+    width: 19.5rem;
+    height: 15.625rem;
+    background: #303030;
+    box-shadow: 2rem 2rem 7.75rem rgba(43, 56, 76, 0.1);
+    border-radius: 0.75rem;
+    padding: 26px !important;
+
+}
+
+.worktitle {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.0625rem;
+    line-height: 1.5rem;
+    color: #afafaf;
+    padding-bottom: 0.75rem;
+}
+
+.workbody {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: #cdcdcd;
+}
+
+.projectcontainer {
+    padding: 100px 0;
+}
+
+.projecttitle {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    color: #efefef;
+    margin-bottom: 1.25rem;
+}
+
+.portfoliowidth {
+    width: 25rem;
+}
+
+.portfoliocard {
+    background: #303030;
+    border: 0.0625rem solid #454545;
+    white-space: wrap;
+    box-shadow: 0rem 0.5rem 1rem rgba(28, 25, 25, 0.8);
+    border-radius: 0.5rem;
+}
+
+.portfolioimg {
+    height: 250px;
+    width: 100%;
+    aspect-ratio: 1;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.portfolioimg img {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    transition: all .6s ease;
+
+    filter: grayscale(1.0) contrast(1.6);
+
+}
+
+.portfolioimg img:hover {
+    transform: scale(1.3);
+    overflow: hidden;
+    filter: none;
+}
+
+
+.portfoliotag {
+    color: #87909D;
+}
+
+.portfoliotagbox {
+    background-color: #000;
+    padding: 0.1875rem 0.5rem;
+    border-radius: 0.375rem;
+    color: #F0F1F3;
+    margin-right: 0.1875rem;
+    font-size: 0.625rem;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1rem;
+    margin-top: 0.1875rem;
+}
+
+.portfoliotitle {
+    margin-top: 0.875rem;
+    margin-bottom: 0.8125rem;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: #efefef;
+
+}
+
+.portfoliodetail {
+    padding: 1.5rem;
+}
+
+.portfoliodescription {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #fff;
+
+}
+
+.portfoliobtn {
+    background: #666666;
+    padding: 0.375rem 0.625rem;
+    border: 0.0625rem solid #000;
+    border-radius: 0.25rem;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+#bandlogo {
+    background-color: transparent;
+    filter: drop-shadow(0px 0px 20px #fff);
+}
+
+#navbar {
+
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(8px);
+    position: sticky !important;
+    top: 0;
+    z-index: 999;
+    padding-bottom: 20;
+    border-bottom: 0.4px solid #aaaaaa;
+    color: #fff;
+}
+
+.portfoliobtn:hover {
+    border: 0.0625rem solid #000;
+    border-radius: 0.25rem;
+    color: #FFFFFF;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.portfoliobtn:active {
+    border: 0.0625rem solid #000;
+    border-radius: 0.25rem;
+    color: #FFFFFF;
+    background-color: rgb(60, 117, 68);
+    cursor: pointer;
+}
+
+.portfoliobtn svg path {
+    fill: #FFFFFF !important;
+    cursor: pointer;
+}
+
+.portfoliobtn:hover svg path {
+    fill: #FFFFFF !important;
+    cursor: pointer;
+}
+
+.footer {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background: #303030;
+    color: #F0F1F3;
+    font-size: 0.8125rem;
+}
+
+.projectbox {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
+.projectbox::-webkit-scrollbar {
+    display: none;
+}
+
+#notfoundtext {
+    text-align: center;
+    font-family: 'Work Sans';
+    font-weight: 700;
+    font-size: 3.75rem;
+    flex-grow: 1;
+    line-height: 5rem;
+    color: #efefef;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+
+    justify-self: center;
+}
+
+.nav-link {
+    text-decoration: none !important;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 0.25rem;
+}
+
+.nav-link>a {
+    text-decoration: none !important;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.25rem;
+}
+
+
+.nav-link>a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.active {
+    color: #fff !important;
+    background-color: #000000;
+}
+
+.projectrow {
+    flex-wrap: wrap;
+}
+
+.contacttitle {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 3.125rem;
+    color: #fff;
+}
+
+.contactbox {
+    /* padding: 12px; */
+    gap: 10px;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border-radius: 8px;
+}
+
+.contactboxtitle {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #efefef;
+}
+
+.contactboxvalue {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-end;
+    color: #acacac;
+}
+
+
+.contactmessage {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #efefef;
+}
+
+.contactinput {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 15px;
+    padding: 7px 7px;
+    border: none;
+    text-shadow: none;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 5px;
+    /* border-bottom: 1px solid #E6E8EB; */
+    box-shadow: none;
+}
+
+.contactinput:focus-visible {
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #000 !important;
+    outline: none
+}
