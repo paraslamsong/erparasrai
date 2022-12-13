@@ -22,10 +22,10 @@ export default function PhotographyPage() {
     // const prevIndex = (index + images.length - 1) % images.length;
     // const prevImage = images[prevIndex] || currentImage;
 
-    const handleClick = (index, item) => setIndex(index);
-    const handleClose = () => setIndex(-1);
-    const handleMovePrev = () => setIndex(index - 1);
-    const handleMoveNext = () => setIndex(index + 1);
+    // const handleClick = (index, item) => setIndex(index);
+    // const handleClose = () => setIndex(-1);
+    // const handleMovePrev = () => setIndex(index - 1);
+    // const handleMoveNext = () => setIndex(index + 1);
 
 
     if (isLoading) return <Loading />
