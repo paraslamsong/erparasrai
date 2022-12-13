@@ -4,7 +4,6 @@ import { MetaTags } from "react-meta-tags";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import ReactSEOMetaTags from "react-seo-meta-tags";
-import { getLinkIcon } from "../../assets/icons";
 import { Loading } from "../../components/loading";
 import { fetchAlgorithmDetail, fetchCode } from "../../fetches/algorithms_fetch";
 
