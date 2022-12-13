@@ -32,6 +32,8 @@ jobs:
           ${{ runner.os }}-
     - name: Install package dependencies
       run: npm install
+    - name: Build app
+      run: npm run build
 
     - name: Sync Files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
