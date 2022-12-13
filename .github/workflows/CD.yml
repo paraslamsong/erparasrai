@@ -12,6 +12,27 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v2
 
+    - name: Set up NodeJS environment
+      uses: actions/setup-node@v2
+      with:
+        node-version-file: '.nvmrc'
+
+    # Consider this as an add on to optimize the execution of actions
+    - name: Cache node modules
+      id: cache-npm
+      uses: actions/cache@v3
+      env:
+        cache-name: cache-node-modules
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
+    - name: Install package dependencies
+      run: npm install
+
     - name: Sync Files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with: 
@@ -19,5 +40,6 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: /reactjs/erparasrai/
+        local-dir: /build/
         protocol: ftp
         port: 21
