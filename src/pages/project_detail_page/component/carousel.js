@@ -2,26 +2,12 @@
 import { Carousel } from '@sefailyasoz/react-carousel'
 import '../../../styles/carousel.css';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
-export default function ImageCarousel() {
+export default function ImageCarousel({ images }) {
 
 
-    const CarouselData = [
-        {
-            image: 'https://picsum.photos/300/300',
-        },
-        {
-            image: 'https://picsum.photos/1200/800',
-        },
-        {
-            image: 'https://picsum.photos/720/720',
-        },
-        {
-            image: 'https://picsum.photos/1920/1080',
-        },
-        {
-            image: 'https://picsum.photos/480/360',
-        },
-    ]
+    const CarouselData = images.map((image) => {
+        return { image: image }
+    });
     return (
         <div className='carousel'>
             <Carousel

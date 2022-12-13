@@ -6,6 +6,8 @@ import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import React, { useRef, useCallback } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import { useQuery } from "react-query";
+import { fetchFeaturedProjects } from "../../../fetches/project_fetch";
 
 export default function ProjectsSection() {
     const containerRef = useRef();
@@ -18,6 +20,16 @@ export default function ProjectsSection() {
             behaviour: "smooth"
         });
     }, []);
+
+
+    const { isLoading, isError, data, error } = useQuery('all-projects', fetchFeaturedProjects)
+    if (isLoading) {
+        return <></>
+    }
+    if (isError) {
+        return <></>
+    }
+
     return (
         <div id='projects' className="projectcontainer">
             <Container className="projecttitle">
@@ -29,12 +41,9 @@ export default function ProjectsSection() {
                 onWheel={onWheel}
                 onDrag={onWheel}
             >
-                <PortfolioCard className="portfoliowidth" />
-                <PortfolioCard className="portfoliowidth" />
-                <PortfolioCard className="portfoliowidth" />
-                <PortfolioCard className="portfoliowidth" />
-                <PortfolioCard className="portfoliowidth" />
-                <PortfolioCard className="portfoliowidth" />
+                <div style={{ width: "1.5rem" }} />
+                {data.map((project) => <PortfolioCard className="portfoliowidth" project={project} />)}
+                <div style={{ width: "1.5rem" }} />
             </div>
             <Container style={{ textAlign: "center", marginTop: 30, marginBottom: 20 }}>
                 <span className="portfoliobtn" onClick={() => navigate("/projects")}>

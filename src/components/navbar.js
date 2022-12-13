@@ -15,6 +15,7 @@ const Links = [
     { title: 'Home', path: "/" },
     { title: 'Projects', path: "/projects" },
     { title: 'Photography', path: "/photography" },
+    { title: 'Algorithms', path: "/algorithms" },
     { title: 'Hobbies', path: "/hobbies" },
     { title: 'Contact', path: "/contact" },
 ];
@@ -39,7 +40,7 @@ export default function Header() {
             id='navbar'
         >
             <Container>
-                <Navbar.Brand href="#home" onMouseEnter={(e) => playBatman()} >
+                <Navbar.Brand onMouseEnter={(e) => playBatman()} >
                     <Image id='bandlogo' src={logo} height={36} />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
