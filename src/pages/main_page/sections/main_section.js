@@ -11,8 +11,6 @@ import { fetchAbout } from "../../../fetches/about_fetch";
 import { useQuery } from "react-query";
 
 export default function MainSection() {
-
-
     const { isLoading, isError, data, error } = useQuery('about', fetchAbout)
     if (isLoading) {
         return <></>
