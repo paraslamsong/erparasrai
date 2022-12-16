@@ -35,7 +35,7 @@ export default function ContactPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post("http://localhost:8000/api/about/message/", {
+        axios.post("https://api.erparasrai.com.np/api/about/message/", {
             "name": event.target.elements.name.value,
             "email": event.target.elements.email.value,
             "subject": event.target.elements.subject.value,

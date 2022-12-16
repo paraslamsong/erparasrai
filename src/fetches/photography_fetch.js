@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export async function fetchPhotography() {
-    var response = await axios.get("http://localhost:8000/api/photography/all/");
+    var response = await axios.get("https://api.erparasrai.com.np/api/photography/all/");
     const images = []
     if (response.status == 200) {
         response.data.forEach((img) => {

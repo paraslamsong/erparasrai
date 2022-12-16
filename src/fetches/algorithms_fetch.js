@@ -1,13 +1,13 @@
 import axios from "axios";
 
 export async function fetchAlgorithms() {
-    var response = await axios.get("http://localhost:8000/api/algorithm/all/");
+    var response = await axios.get("https://api.erparasrai.com.np/api/algorithm/all/");
     if (response.status == 200) {
         return response.data;
     }
 }
 export async function fetchAlgorithmDetail(slug) {
-    var response = await axios.get(`http://localhost:8000/api/algorithm/${slug}/detail/`);
+    var response = await axios.get(`https://api.erparasrai.com.np/api/algorithm/${slug}/detail/`);
     if (response.status == 200) {
         return response.data;
     }
