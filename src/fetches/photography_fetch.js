@@ -11,9 +11,10 @@ export async function fetchPhotography() {
                 tags: img.tags.map((tag) => { return { value: tag, title: tag } }),
                 alt: img.alt,
 
-                height: 2000,
+                width: 5000,
                 caption: img.description,
                 original: img.original,
+                description: img.description,
             })
         })
         return images;

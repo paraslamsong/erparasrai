@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { MetaTags } from "react-meta-tags";
 import { useQuery } from "react-query";
+import { Loading } from "../../components/loading";
 import PortfolioCard from "../../components/portfolio_card";
 import { fetchAllProjects } from "../../fetches/project_fetch";
 
@@ -8,9 +9,8 @@ export default function ProjectsPage() {
 
     const { isLoading, isError, data, error } = useQuery('all-projects', fetchAllProjects)
 
-    if (isLoading) {
-        return <>Loading</>
-    }
+
+    if (isLoading) return <Loading />
     return (
         <Container className="projectcontainer" style={{ paddingBottom: 20, paddingTop: 20 }}>
 

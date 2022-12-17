@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Container, Image, Modal } from "react-bootstrap";
 import { MetaTags } from "react-meta-tags";
 import { useQuery } from "react-query";
@@ -137,9 +137,15 @@ export default function AlgorithmDetailPage() {
 function MyVerticallyCenteredModal(props) {
     const { size, elapsed, percentage, download, cancel, error, isInProgress } =
         useDownloader();
+    const [data, setData] = useState(null);
 
-    const { isLoading, isError, data } = useQuery('algorithm-code', () => fetchCode(props.file))
+    // const { isLoading, isError, data } = useQuery(`algorithm-code=${props.file}`, () => fetchCode(props.file))
     const [isCopied, setCopied] = useState(false);
+    useEffect(async () => {
+        let data = await fetchCode(props.file);
+        setData(data);
+
+    }, [])
     return (
         <Modal
             {...props}
@@ -154,31 +160,27 @@ function MyVerticallyCenteredModal(props) {
                 <Modal.Title id="contained-modal-title-vcenter">
                     Code
                 </Modal.Title>
-                {data != null ?
-                    <div className="text-right my-3">
-                        <span className="portfoliobtn"
-                            data-toggle="tooltip" data-placement="top" title="Copy code"
-                            onClick={() => {
-                                setCopied(false);
-                                navigator.clipboard.writeText(data);
-                                setCopied(true);
-                            }}>
-                            Copy&nbsp;
-                            <img width={20} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABrElEQVRoge2YMU7jQBhGvx8oaKBCKdACQdT0XAAuABJX4Ag5BDXsFnsBKJHoIRKipqYgiUSRrUiFRKJHgb0aIY8VO2PPrjSvsTVjzf8+z3gkj5RIJBL/DcA20AP6wCswJQxj4DfQaUp8FTgH3gMJ+3gGNkLLd4DHhsVdrkLKrxbI3wOnwCawHKxYE/C1bHI+gLPYTnPD1wfrrvkzp68L/AJGhPuQc6bZuD+B7iIBes6gd077ETAJLO1jAhzWDdB3BjrN2nZblM95A3Z8nkslGfac+3527Ulaq/VG6rOe1S3EfB3AVFK+y6yY2QwYSfoR1m8uhmZWOAtlAfj7kJllbW6oNpmZ2UpRR9kSKiLWvu+tWzXAP0cKEJsUIDYpQGxSgNikALFJAWKTAsSmLMCf1iwWoCzATWsWC1D2S9mR9CBpz/mlxPd80+QO3/HOgJmNJR1IunaaZ4G95sVb1zsDRQBDSVsL61RnYGaFp3RVd6HbADJ18NatOgNdSU9q93BrImnfzIZFnZVmwMxeJB1ng7bBRNKJT742wA5wCQxo5nR6AFwA20HFE4lEIjifSk+TwERAwZ4AAAAASUVORK5CYII=" />
-                        </span>
-                    </div> : <></>}
+                <div className="text-right my-3">
+                    <span className="portfoliobtn"
+                        data-toggle="tooltip" data-placement="top" title="Copy code"
+                        onClick={() => {
+                            setCopied(false);
+                            navigator.clipboard.writeText(props.code);
+                            setCopied(true);
+                        }}>
+                        Copy&nbsp;
+                        <img width={20} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABrElEQVRoge2YMU7jQBhGvx8oaKBCKdACQdT0XAAuABJX4Ag5BDXsFnsBKJHoIRKipqYgiUSRrUiFRKJHgb0aIY8VO2PPrjSvsTVjzf8+z3gkj5RIJBL/DcA20AP6wCswJQxj4DfQaUp8FTgH3gMJ+3gGNkLLd4DHhsVdrkLKrxbI3wOnwCawHKxYE/C1bHI+gLPYTnPD1wfrrvkzp68L/AJGhPuQc6bZuD+B7iIBes6gd077ETAJLO1jAhzWDdB3BjrN2nZblM95A3Z8nkslGfac+3527Ulaq/VG6rOe1S3EfB3AVFK+y6yY2QwYSfoR1m8uhmZWOAtlAfj7kJllbW6oNpmZ2UpRR9kSKiLWvu+tWzXAP0cKEJsUIDYpQGxSgNikALFJAWKTAsSmLMCf1iwWoCzATWsWC1D2S9mR9CBpz/mlxPd80+QO3/HOgJmNJR1IunaaZ4G95sVb1zsDRQBDSVsL61RnYGaFp3RVd6HbADJ18NatOgNdSU9q93BrImnfzIZFnZVmwMxeJB1ng7bBRNKJT742wA5wCQxo5nR6AFwA20HFE4lEIjifSk+TwERAwZ4AAAAASUVORK5CYII=" />
+                    </span>
+                </div>
             </Modal.Header>
             {
                 isCopied ?
                     <div className="px-4 py-2 bg-success" style={{ fontSize: 10, fontWeight: 600, textAlign: "right" }}>Code Copied</div> : <></>
             }
             <Modal.Body style={{ overflowY: "scroll" }}>
-                {isLoading ? <Loading /> :
-                    <pre onselectstart='return true;'>
-                        {data}
-                        {/* {props.code} */}
-                    </pre>
-                }
+                <pre onselectstart='return true;'>
+                    {props.code}
+                </pre>
             </Modal.Body>
             <Modal.Footer>
                 <Button className="btn-success btn-sm" onClick={() => {
