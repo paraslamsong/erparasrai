@@ -1,5 +1,11 @@
 @import url("./fonts.css");
 
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+}
+
 html {
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -9,7 +15,6 @@ html {
 }
 
 img {
-
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -73,7 +78,7 @@ img {
 }
 
 #greeting {
-    font-size: 4.5rem;
+    font-size: 56px;
     font-weight: 600;
     line-height: 5.25rem;
     font-family: 'Work Sans';
@@ -86,7 +91,7 @@ img {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 18px;
     line-height: 1.5rem;
     color: #efefef;
 }

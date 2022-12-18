@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { MetaTags } from "react-meta-tags";
 import { useQuery } from "react-query";
 import { Loading } from "../../components/loading";
+import { ProPagination } from "../../components/pagination";
 import PortfolioCard from "../../components/portfolio_card";
 import { fetchAllProjects } from "../../fetches/project_fetch";
 
@@ -24,6 +25,11 @@ export default function ProjectsPage() {
                     </Col>
                 })}
             </div>
+            <ProPagination
+                currentPage={1}
+                totalPage={3}
+                onPageChange={(page) => { }}
+            />
         </Container>
     )
 }

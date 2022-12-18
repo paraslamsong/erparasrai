@@ -1,4 +1,4 @@
-import { Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import PortfolioCard from "../../../components/portfolio_card";
 import { ScrollingCarousel } from '@trendyol-js/react-carousel';
 // import Carousel from 'react-elastic-carousel'
@@ -42,7 +42,8 @@ export default function ProjectsSection() {
                 onDrag={onWheel}
             >
                 <div style={{ width: "1.5rem" }} />
-                {data.map((project) => <PortfolioCard className="portfoliowidth" project={project} />)}
+                {data.map((project) => <Col><PortfolioCard className="portfoliowidth" project={project} />
+                </Col>)}
                 <div style={{ width: "1.5rem" }} />
             </div>
             <Container style={{ textAlign: "center", marginTop: 30, marginBottom: 20 }}>

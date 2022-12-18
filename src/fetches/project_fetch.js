@@ -14,7 +14,6 @@ export async function fetchFeaturedProjects() {
 }
 
 export async function fetchProjectDetail(slug) {
-
     var response = await axios.get(`https://api.erparasrai.com.np/api/projects/${slug}/detail/`);
     if (response.status == 200) {
         return response.data;
