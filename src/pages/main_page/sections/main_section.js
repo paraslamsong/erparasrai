@@ -1,4 +1,3 @@
-import { Box, Text, Center, Flex, Square, useColorMode, Stack, Image, HStack, VStack } from "@chakra-ui/react";
 
 import displayphone from '../../../assets/images/displayphone.png';
 
@@ -43,42 +42,40 @@ export default function MainSection() {
                         </Row>
                     </Col>
                     <Col lg={8} md={12} sm={12}>
-                        <VStack>
-                            <Center w={"full"} style={{ opacity: 0.6 }}>
-                                <Lottie
+                        <center className="w-100" style={{ opacity: 0.6 }}>
+                            <Lottie
 
-                                    options={{
-                                        loop: true,
-                                        autoplay: true,
-                                        animationData: animationData,
-                                        rendererSettings: {
-                                            preserveAspectRatio: 'xMidYMid slice'
-                                        }
-                                    }}
+                                options={{
+                                    loop: true,
+                                    autoplay: true,
+                                    animationData: animationData,
+                                    rendererSettings: {
+                                        preserveAspectRatio: 'xMidYMid slice'
+                                    }
+                                }}
+                                width={"full"}
+                            />
+                        </center>
+                        <div flex='1' position="absolute" textAlign="center" w={"full"} h="100%">
+                            <center className='w-100'>
+                                <Lottie options={{
+                                    loop: true,
+                                    autoplay: true,
+
+
+
+                                    animationData: developerAnimation,
+                                    rendererSettings: {
+                                        preserveAspectRatio: 'xMidYMid slice'
+                                    }
+                                }}
+                                    isPaused={false}
+                                    height={500}
                                     width={"full"}
                                 />
-                            </Center>
-                            <Flex flex='1' position="absolute" textAlign="center" w={"full"} h="100%">
-                                <Center w={"100%"}>
-                                    <Lottie options={{
-                                        loop: true,
-                                        autoplay: true,
-
-
-
-                                        animationData: developerAnimation,
-                                        rendererSettings: {
-                                            preserveAspectRatio: 'xMidYMid slice'
-                                        }
-                                    }}
-                                        isPaused={false}
-                                        height={500}
-                                        width={"full"}
-                                    />
-                                    {/* <Image src={displayphone} h={400} /> */}
-                                </Center>
-                            </Flex>
-                        </VStack>
+                                {/* <Image src={displayphone} h={400} /> */}
+                            </center>
+                        </div>
                     </Col>
 
                 </Row>
