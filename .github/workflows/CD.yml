@@ -6,11 +6,8 @@ on:
     branches: [ "main" ]
 jobs:
   build:
-
+    name: Build and deploy
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -26,7 +23,7 @@ jobs:
     - name: Build
       run: npm run build
       
-    - name: Deploy
+    - name: Deploy to server
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with: 
         server: ${{ secrets.FTP_SERVER }}
