@@ -8,11 +8,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [12.x]
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -27,13 +25,8 @@ jobs:
 
     - name: Build
       run: npm run build
-  web-deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: Get latest code
-      uses: actions/checkout@v2
-    - name: Sync Files
+      
+    - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with: 
         server: ${{ secrets.FTP_SERVER }}
@@ -43,3 +36,19 @@ jobs:
         local-dir: build/
         protocol: ftp
         port: 21
+  # web-deploy:
+  #   name: Deploy
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Get latest code
+  #     uses: actions/checkout@v2
+  #   - name: Sync Files
+  #     uses: SamKirkland/FTP-Deploy-Action@4.3.3
+  #     with: 
+  #       server: ${{ secrets.FTP_SERVER }}
+  #       username: ${{ secrets.FTP_USERNAME }}
+  #       password: ${{ secrets.FTP_PASSWORD }}
+  #       server-dir: /reactjs/erparasrai/
+  #       local-dir: build/
+  #       protocol: ftp
+  #       port: 21
