@@ -19,8 +19,6 @@ export default function ImageCarousel({ images }) {
                 headerTextType="black"
                 subTextType="white"
                 size="normal"
-
-
             />
         </div>);
 }

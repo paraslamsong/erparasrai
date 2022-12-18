@@ -292,6 +292,7 @@ img {
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    flex: 1;
 
     color: #fff;
 
@@ -542,4 +543,8 @@ img {
 .hobby-title {
     font-size: 36px;
     font-weight: 500;
+}
+
+.caraousel, img {
+    object-fit: cover;
 }

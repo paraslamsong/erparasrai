@@ -26,7 +26,7 @@ export function HobbyDetailPage() {
 
     return <Container className="py-3 my-4">
         <center>
-            <Image src={data.cover} style={{ maxHeight: 450 }} fluid />
+            <Image src={data.cover} style={{ maxHeight: 450 }} fluid alt={data.name} />
         </center>
         <div className="hobby-title my-3">
             {data.name}

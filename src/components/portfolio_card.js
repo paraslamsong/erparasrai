@@ -6,10 +6,10 @@ export default function PortfolioCard({ className, project }) {
 
     const tag = (tag) => <span className="portfoliotagbox">{tag}</span>;
     return (
-        <div className="p-2">
-            <div className={`portfoliocard ${className}`}>
+        <div className="p-2 h-100">
+            <div className={`portfoliocard h-100 ${className}`}>
                 <section className="portfolioimg">
-                    {project.images.map((source) => <Image src={source} fluid height={"100%"} />)[0]}
+                    {project.images.map((source) => <Image src={source} fluid height={"100%"} alt={project.name} />)[0]}
                 </section>
                 <section className="portfoliodetail">
                     <div className="portfoliotag  flex-wrap d-flex">

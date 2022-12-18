@@ -41,7 +41,7 @@ export default function Header() {
         >
             <Container>
                 <Navbar.Brand onMouseEnter={(e) => playBatman()} >
-                    <Image id='bandlogo' src={logo} height={36} />
+                    <Image id='bandlogo' src={logo} height={36} width={100} alt="logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

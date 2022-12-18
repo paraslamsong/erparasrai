@@ -35,18 +35,22 @@ function Navigation() {
           element={<Navigate to="/" />}
         />
         <Route
+          exact
           path="/"
           element={<MainPage />}
         />
         <Route
+          exact
           path="/projects"
           element={<ProjectsPage />}
         />
         <Route
+          exact
           path="/project/:slug/detail"
           element={<ProjectDetailPage />}
         />
         <Route
+          exact
           path="/photography"
           element={<PhotographyPage />}
         />
@@ -55,22 +59,27 @@ function Navigation() {
           element={<ContactPage />}
         />
         <Route
+          exact
           path="/algorithms"
           element={<AlgorithmPage />}
         />
         <Route
+          exact
           path="/algorithm/:slug/detail"
           element={<AlgorithmDetailPage />}
         />
         <Route
+          exact
           path="/hobbies"
           element={<HobbiesPage />}
         />
         <Route
+          exact
           path="/hobby/:slug/detail"
           element={<HobbyDetailPage />}
         />
         <Route
+          exact
           path="/*"
           element={<NotFound />}
         />
@@ -79,6 +88,7 @@ function Navigation() {
 
 }
 function App() {
+  console.log = () => { };
   return (
     <div className='d-flex flex-column' style={{ minHeight: "100vh" }}>
 

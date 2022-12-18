@@ -11,10 +11,17 @@ export default function AlgorithmCard({ className, algorithm }) {
                 {/* <section className="portfolioimg">
                     {algorithm.images.map((source) => )[0]}
                 </section> */}
-                <Image src={algorithm.image} fluid height={"100%"} width={"100%"} style={{
-                    objectFit: "cover",
-                    borderRadius: "0.5rem",
-                }} />
+                <Image
+                    src={algorithm.image}
+                    fluid
+                    height={"100%"}
+                    width={"100%"}
+                    style={{
+                        objectFit: "cover",
+                        borderRadius: "0.5rem",
+                    }}
+                    alt={algorithm.name}
+                />
                 <section className="portfoliodetail">
                     <div className="portfoliotag  flex-wrap d-flex">
                         {

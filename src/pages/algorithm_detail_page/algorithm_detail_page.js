@@ -34,7 +34,7 @@ export default function AlgorithmDetailPage() {
         </MetaTags>
         <div style={{ height: 60 }} />
         <center>
-            <Image className="w-100" style={{ maxWidth: 700 }} src={data.image} fluid />
+            <Image className="w-100" style={{ maxWidth: 700 }} src={data.image} fluid alt={data.name} />
         </center>
         <div style={{ height: 30 }} />
         {data.tags.map((tag) => <span className="tagbox">{tag}</span>)}
@@ -61,7 +61,7 @@ export default function AlgorithmDetailPage() {
         <div className="body w-100">{data.example_description}</div>
 
         <center>
-            <Image className="my-2 w-100" style={{ maxWidth: 700 }} src={data.example_image} fluid />
+            <Image className="my-2 w-100" style={{ maxWidth: 700 }} src={data.example_image} fluid alt={data.name} />
         </center>
         <div>
             <div className="title w-100">

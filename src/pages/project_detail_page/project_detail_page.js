@@ -57,7 +57,7 @@ export default function ProjectDetailPage() {
             <div>
                 <div>
                     {data.project_links.map((link) => <div className="my-2">
-                        <Image className="linkimg" src={getLinkIcon(link.type)} height={40} />&nbsp;&nbsp;&nbsp;
+                        <Image className="linkimg" src={getLinkIcon(link.type)} height={40} alt={link.type} />&nbsp;&nbsp;&nbsp;
                         <a className="projectlink" href={link.link} target="_blank" >Open {link.type}</a>
                     </div>)}
                 </div>
