@@ -1,4 +1,4 @@
-import { Card, Col, Image } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 export default function AlgorithmCard({ className, algorithm }) {

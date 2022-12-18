@@ -15,20 +15,20 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const getContactIcon = (type, size) => {
-    if (type == "address") {
+    if (type === "address") {
         return <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 3.4804C13.4087 1.8891 11.2504 0.995117 8.99999 0.995117C6.74955 0.995117 4.59129 1.8891 2.99999 3.4804C1.40869 5.0717 0.514709 7.22996 0.514709 9.4804C0.514709 11.7308 1.40869 13.8891 2.99999 15.4804L8.26999 20.7604C8.36295 20.8541 8.47356 20.9285 8.59541 20.9793C8.71727 21.0301 8.84798 21.0562 8.97999 21.0562C9.112 21.0562 9.24271 21.0301 9.36457 20.9793C9.48643 20.9285 9.59703 20.8541 9.68999 20.7604L15 15.4304C16.5846 13.8457 17.4749 11.6965 17.4749 9.4554C17.4749 7.21434 16.5846 5.06508 15 3.4804ZM13.57 14.0004L8.99999 18.5904L4.42999 14.0004C3.52713 13.0967 2.91247 11.9456 2.66369 10.6927C2.4149 9.43973 2.54318 8.14115 3.03229 6.96108C3.52141 5.78101 4.34941 4.77245 5.41162 4.06288C6.47383 3.3533 7.72258 2.97458 8.99999 2.97458C10.2774 2.97458 11.5261 3.3533 12.5884 4.06288C13.6506 4.77245 14.4786 5.78101 14.9677 6.96108C15.4568 8.14115 15.5851 9.43973 15.3363 10.6927C15.0875 11.9456 14.4728 13.0967 13.57 14.0004ZM5.99999 6.4104C5.19271 7.22017 4.73939 8.31697 4.73939 9.4604C4.73939 10.6038 5.19271 11.7006 5.99999 12.5104C6.59975 13.1112 7.36358 13.5215 8.19564 13.6898C9.0277 13.8581 9.89094 13.777 10.6771 13.4566C11.4632 13.1361 12.1372 12.5907 12.6145 11.8886C13.0918 11.1866 13.3511 10.3593 13.36 9.5104C13.3645 8.9436 13.2553 8.38166 13.0389 7.85779C12.8225 7.33392 12.5032 6.85875 12.1 6.4604C11.7037 6.05498 11.2311 5.73194 10.7094 5.50986C10.1878 5.28779 9.62733 5.17107 9.06039 5.16643C8.49345 5.16178 7.93119 5.2693 7.40596 5.48279C6.88073 5.69628 6.40291 6.01153 5.99999 6.4104ZM10.69 11.0904C10.311 11.4751 9.8102 11.7163 9.27312 11.7727C8.73603 11.829 8.19605 11.697 7.7455 11.3993C7.29494 11.1016 6.96179 10.6566 6.803 10.1405C6.64421 9.62432 6.66964 9.06904 6.87495 8.56955C7.08026 8.07007 7.45269 7.65741 7.92858 7.40213C8.40446 7.14686 8.95424 7.06481 9.48393 7.17002C10.0136 7.27522 10.4903 7.56116 10.8325 7.97893C11.1747 8.3967 11.3612 8.92037 11.36 9.4604C11.3454 10.0777 11.0865 10.6639 10.64 11.0904H10.69Z" fill="white" />
         </svg>
     }
-    else if (type == "email") {
-        return <img height={size ?? 22} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAABgklEQVRIie3VsWpUURDG8e8umsJCiEKELARECIQQWBB8AhsfwCdQYiuWdnbrI9iFCGKjlQEbO61sRBAkBEXchIAKQiQhhf5S7Fm8LtndsG4gRf5wOMPM3PmGuefek5xy4sEUHmLL5NlEG1MpxnHTrtBJ0jzmwXUqSLKe5GeSaxMWeFf2VqMY80nOJFlO8n4CAh+T3Euyn6SVJOmb5XfcwE18HuNddLCM69iuBxp9nVxMspbkapKFJHfTHekofiV5UCYzneRlkkv/ZAzp7gWmcUH3ZO4ekrOPR5jBeTwbVGyYEGxgsTQ0hxX8LmsFcyW2WHIHMkroQ+n2LKpSdAlLxa5KbKbkjiW0jllcxhu8xkJt5FfwCm8xP0pskNAGmriFnZp/D/fL2qv5d0pu04ARHib0BS08GdTdEJ6XZz+NEvqK22Ufl23c0fcd1oV+4Knuifpf/mAN33qOCptJZpPsJjl31H/MEenV3GokeVyckxap11ztXXxt3Utq0vy9+E458RwARXy09pFxniYAAAAASUVORK5CYII="></img>
+    else if (type === "email") {
+        return <img alt="Email" height={size ?? 22} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAABgklEQVRIie3VsWpUURDG8e8umsJCiEKELARECIQQWBB8AhsfwCdQYiuWdnbrI9iFCGKjlQEbO61sRBAkBEXchIAKQiQhhf5S7Fm8LtndsG4gRf5wOMPM3PmGuefek5xy4sEUHmLL5NlEG1MpxnHTrtBJ0jzmwXUqSLKe5GeSaxMWeFf2VqMY80nOJFlO8n4CAh+T3Euyn6SVJOmb5XfcwE18HuNddLCM69iuBxp9nVxMspbkapKFJHfTHekofiV5UCYzneRlkkv/ZAzp7gWmcUH3ZO4ekrOPR5jBeTwbVGyYEGxgsTQ0hxX8LmsFcyW2WHIHMkroQ+n2LKpSdAlLxa5KbKbkjiW0jllcxhu8xkJt5FfwCm8xP0pskNAGmriFnZp/D/fL2qv5d0pu04ARHib0BS08GdTdEJ6XZz+NEvqK22Ufl23c0fcd1oV+4Knuifpf/mAN33qOCptJZpPsJjl31H/MEenV3GokeVyckxap11ztXXxt3Utq0vy9+E458RwARXy09pFxniYAAAAASUVORK5CYII="></img>
     } else {
-        return <img height={size ?? 24} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAABh0lEQVRoge2aP0oDQRSHZxKDiILY+AdsbLyBQcFb2JlYi63XUHMCT5FSxGZjYaO9wQvEwmhhkeaz8IUskk12ZyfLQ94HSxiY/b35dibNvnXOMHQBLAOXwDPwTTgj4A3oANtVS+wALyUWn8U7cFSVRAN4ksIfwBmwWiJvBTgGkpTMVsw1ZxU+l4KfwH7E3HpK5iZW7qyCj1LsYgHZB5Ldj509rdiXFNuQ8UOE/0YiWQ0Zj4quyweI4Jxz3nufHpflb954nJelGIsIKTwm1oOoxQjRgIlow0S0YSLaMBFtmIg2TEQbJqINE9GGiWjDRLRhItowEW2YiDb+jUi0l9ixXkaHEmNHehEykggZxQCG0oxZzzG3BrTlmtt2KNPoKQzQk2KtHHPbqa5UnvlNmftadF0hR+tWfq+AvYD7pwLUnXMdGXZj5c4qWAPu5MkN+f1oYDdjrgdawGnW0ZLj1Ezt9ADYXKzFpPga0C3e85zLADisRCIl44ET4J5JpzeEEdAHrqlqJwwjPz+YU7ph0rhU/gAAAABJRU5ErkJggg==" />
+        return <img alt="Phone" height={size ?? 24} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAABh0lEQVRoge2aP0oDQRSHZxKDiILY+AdsbLyBQcFb2JlYi63XUHMCT5FSxGZjYaO9wQvEwmhhkeaz8IUskk12ZyfLQ94HSxiY/b35dibNvnXOMHQBLAOXwDPwTTgj4A3oANtVS+wALyUWn8U7cFSVRAN4ksIfwBmwWiJvBTgGkpTMVsw1ZxU+l4KfwH7E3HpK5iZW7qyCj1LsYgHZB5Ldj509rdiXFNuQ8UOE/0YiWQ0Zj4quyweI4Jxz3nufHpflb954nJelGIsIKTwm1oOoxQjRgIlow0S0YSLaMBFtmIg2TEQbJqINE9GGiWjDRLRhItowEW2YiDb+jUi0l9ixXkaHEmNHehEykggZxQCG0oxZzzG3BrTlmtt2KNPoKQzQk2KtHHPbqa5UnvlNmftadF0hR+tWfq+AvYD7pwLUnXMdGXZj5c4qWAPu5MkN+f1oYDdjrgdawGnW0ZLj1Ezt9ADYXKzFpPga0C3e85zLADisRCIl44ET4J5JpzeEEdAHrqlqJwwjPz+YU7ph0rhU/gAAAABJRU5ErkJggg==" />
     }
 }
 
 export default function ContactPage() {
-    const { isLoading, isError, data, error } = useQuery('contacts', fetchContact);
+    const { isLoading, isError, data } = useQuery('contacts', fetchContact);
 
     const [modalShow, setModalShow] = useState(false);
 
@@ -90,7 +90,7 @@ export default function ContactPage() {
                     Message Me:
                 </div>
                 {data.map((contact) => <ContactBox title={`${contact.type.toUpperCase()}:`} value={contact.value} onClick={() => {
-                    if (contact.type == "email") {
+                    if (contact.type === "email") {
                         window.open(`https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${contact.value}`)
                     }
                 }} >
@@ -148,9 +148,7 @@ function ContactBox({ children, title, value, onClick }) {
 
 function MyVerticallyCenteredModal(props) {
 
-    const { isLoading, isError, data } = useQuery('CV', fetchCV)
-    const [isCopied, setCopied] = useState(false);
-
+    const { isLoading, data } = useQuery('CV', fetchCV)
 
     let cv = <></>
     if (!isLoading)
@@ -265,7 +263,6 @@ function MyVerticallyCenteredModal(props) {
             <Modal.Footer style={{ border: "none" }}>
                 <Button className="btn-success btn-sm" onClick={() => { download() }}>Download</Button>
                 <Button className="btn-danger btn-sm" onClick={() => {
-                    setCopied(false)
                     props.onHide()
                 }}>Close</Button>
             </Modal.Footer>

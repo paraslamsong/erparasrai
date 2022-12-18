@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import { MetaTags } from "react-meta-tags";
 import { useQuery } from "react-query";
 import { Loading } from "../../components/loading";
@@ -8,7 +8,7 @@ import { fetchAllProjects } from "../../fetches/project_fetch";
 
 export default function ProjectsPage() {
 
-    const { isLoading, isError, data, error } = useQuery('all-projects', fetchAllProjects)
+    const { isLoading, data } = useQuery('all-projects', fetchAllProjects)
 
 
     if (isLoading) return <Loading />

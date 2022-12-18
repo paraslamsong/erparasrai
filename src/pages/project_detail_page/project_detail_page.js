@@ -14,7 +14,7 @@ export default function ProjectDetailPage() {
     let { slug } = useParams();
     const location = window.location
 
-    const { isLoading, isError, data, error } = useQuery(`project-${slug}`, () => fetchProjectDetail(slug), { retry: 1 })
+    const { isLoading, isError, data } = useQuery(`project-${slug}`, () => fetchProjectDetail(slug), { retry: 1 })
 
     if (isError) {
         return <NotFound />
@@ -59,12 +59,12 @@ export default function ProjectDetailPage() {
                     {data.project_file != null ?
                         <div className="my-2">
                             <Image className="linkimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACB0lEQVRoge2ZzWoUQRSFz5WsRKIElaDr4IBxpxt/FhJduRR1pyt9Bn2HPIM+QXCjO0VBBReKiGQhCG7Enw6EoBAmGz8X3pGZdsZUd1U1jdQHA0NP1bnn1O2fokcqFArRADeAHbpnB7ge4tECQhyRtC7pQOyCtOS7pONm9ilKBbjvq7OWxlej2mte+0Gs0DUX2gKOJvLXpP4isOkerrYVWQC+usjNxB6b+LjlHjaAg20E7rnAU2DXaykXgAGP3MvdppPPAz+BITDI5LGJnyVg28NcDJ20F/jgk25n9hgMcMc9fQT2hUxY9QlvgLkOPAYBzLkngNWQCaMWtuVZQI0XkTW265p/XcQAwcs0m3kz+zEjxH5JW7EFzGzC+55YwRlcaPlba3J15L2k02a2WdNekPRS0lJsga46ckzSW+AKMO+fy0oUYhq5OpKdrjrSOSVI3yhBGnBG0rncRbLftUZ3l1y6I8qp1TdKkL5RgvSNEmQKZyWdklQFjK0knVTCB2XKIEMzeyVpRf8OU0laMbPXkoYJ608S8UKgAk64xgD4PP40nzHmS9tiOYNMDTOmmyxEF0EAvgHLrrU8pvvnmI+Jou4716ZxQ7+vg3c17YGkJ5IWYwt0tWk8JOkxfipJaUNMI/c2vpJ0yb8/lHQ4lXC9I+UtSt8oQfrGfx3keecumrPrfzCFQmGSXwgr3jCnkuc/AAAAAElFTkSuQmCC" height={30} alt="Download link" />&nbsp;&nbsp;&nbsp;
-                            <a className="projectlink" href={data.project_file} target="_blank" >Download File</a>
+                            <a className="projectlink" href={data.project_file} rel="noreferrer" target="_blank" >Download File</a>
                         </div> : <></>
                     }
                     {data.project_links.map((link) => <div className="my-2">
                         <Image className="linkimg" src={getLinkIcon(link.type)} height={40} al />&nbsp;&nbsp;&nbsp;
-                        <a className="projectlink" href={link.link} target="_blank" >Open {link.type}</a>
+                        <a className="projectlink" href={link.link} rel="noreferrer" target="_blank" >Open {link.type}</a>
                     </div>)}
                 </div>
             </div>

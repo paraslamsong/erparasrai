@@ -1,6 +1,4 @@
 
-import displayphone from '../../../assets/images/displayphone.png';
-
 import * as animationData from '../../../assets/json/gradient-animation.json'
 import * as developerAnimation from '../../../assets/json/developer-animation.json'
 
@@ -10,7 +8,7 @@ import { fetchAbout } from "../../../fetches/about_fetch";
 import { useQuery } from "react-query";
 
 export default function MainSection() {
-    const { isLoading, isError, data, error } = useQuery('about', fetchAbout)
+    const { isLoading, isError, data } = useQuery('about', fetchAbout)
     if (isLoading) {
         return <></>
     }

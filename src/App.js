@@ -4,7 +4,6 @@ import './styles/main.css';
 import MainPage from './pages/main_page/main_page.js';
 import Header from './components/navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import WorkPge from './pages/main_page/sections/work_section';
 import ProjectsPage from './pages/project_page/projects_page';
 import Footer from './components/footer';
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';

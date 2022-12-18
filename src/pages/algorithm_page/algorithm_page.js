@@ -3,14 +3,13 @@ import { Col, Container, Row } from "react-bootstrap";
 import { MetaTags } from "react-meta-tags";
 import { useQuery } from "react-query";
 import AlgorithmCard from "../../components/algorithm_card";
-import { CodeShell } from "../../components/code_shell";
 import { Loading } from "../../components/loading";
 import { fetchAlgorithms } from "../../fetches/algorithms_fetch";
 
 
 export function AlgorithmPage() {
 
-    const { isLoading, isError, data, error } = useQuery('algorithms', fetchAlgorithms)
+    const { isLoading, data } = useQuery('algorithms', fetchAlgorithms)
 
 
     if (isLoading) return <Loading />

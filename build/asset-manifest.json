@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.1b0ac19f.css",
-    "main.js": "/static/js/main.965b9c3d.js",
+    "main.js": "/static/js/main.bdd67f1e.js",
     "static/js/703.f1a524c3.chunk.js": "/static/js/703.f1a524c3.chunk.js",
-    "static/js/13.553a6f6d.chunk.js": "/static/js/13.553a6f6d.chunk.js",
+    "static/js/13.268e2bc1.chunk.js": "/static/js/13.268e2bc1.chunk.js",
     "static/js/787.a1deb6cc.chunk.js": "/static/js/787.a1deb6cc.chunk.js",
     "static/media/noise.svg": "/static/media/noise.6fca9aa5f458d6a879e7.svg",
-    "static/media/displayphone.png": "/static/media/displayphone.51229386dc8081976abd.png",
     "static/media/Hind-Regular.ttf": "/static/media/Hind-Regular.4d32dabf118c5c7e3f48.ttf",
     "static/media/Hind-Bold.ttf": "/static/media/Hind-Bold.ba5def1986599e839e18.ttf",
     "static/media/Hind-SemiBold.ttf": "/static/media/Hind-SemiBold.2f5c20688fcca64121a2.ttf",
@@ -21,16 +20,15 @@
     "static/media/WorkSans-Light.otf": "/static/media/WorkSans-Light.ce2e8aef3a5d44af7bf6.otf",
     "static/media/WorkSans-Regular.otf": "/static/media/WorkSans-Regular.43ee5fc56d4f16a095ee.otf",
     "static/media/batman.aac": "/static/media/batman.c27528dc44f6e02341f7.aac",
-    "static/media/hill_climbing.py": "/static/media/hill_climbing.89c2b1ed8c278e74ec2c.py",
     "index.html": "/index.html",
     "main.1b0ac19f.css.map": "/static/css/main.1b0ac19f.css.map",
-    "main.965b9c3d.js.map": "/static/js/main.965b9c3d.js.map",
+    "main.bdd67f1e.js.map": "/static/js/main.bdd67f1e.js.map",
     "703.f1a524c3.chunk.js.map": "/static/js/703.f1a524c3.chunk.js.map",
-    "13.553a6f6d.chunk.js.map": "/static/js/13.553a6f6d.chunk.js.map",
+    "13.268e2bc1.chunk.js.map": "/static/js/13.268e2bc1.chunk.js.map",
     "787.a1deb6cc.chunk.js.map": "/static/js/787.a1deb6cc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b0ac19f.css",
-    "static/js/main.965b9c3d.js"
+    "static/js/main.bdd67f1e.js"
   ]
 }

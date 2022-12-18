@@ -18,7 +18,7 @@ import '../../styles/lightbox.css'
 import { useState } from "react";
 export default function PhotographyPage() {
 
-    const { isLoading, isError, data, error } = useQuery('photography', fetchPhotography)
+    const { isLoading, data } = useQuery('photography', fetchPhotography)
 
 
     const [index, setIndex] = useState(0);

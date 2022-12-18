@@ -1,5 +1,5 @@
 import { Container, Image } from "react-bootstrap";
-import { MetaTags, ReactTitle } from "react-meta-tags";
+import { MetaTags } from "react-meta-tags";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import ReactSEOMetaTags from "react-seo-meta-tags";
@@ -12,7 +12,7 @@ export function HobbyDetailPage() {
 
     let { slug } = useParams();
     const location = window.location
-    const { isLoading, isError, data, error } = useQuery(`hobby-${slug}`, () => fetchHobbyDetail(slug), { retry: 1 });
+    const { isLoading, isError, data } = useQuery(`hobby-${slug}`, () => fetchHobbyDetail(slug), { retry: 1 });
 
 
     if (isError) {
