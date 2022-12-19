@@ -15,9 +15,9 @@ export default function ProjectsPage() {
     const [page, setPage] = useState(searchParams.get("page") ?? 1);
     const { isLoading, data, isError } = useQuery(`all-projects-${page}`, () => fetchAllProjects(page))
 
-    useEffect(() => {
-        setPage(searchParams.get("page") ?? 1)
-    }, [window.location])
+    // useEffect(() => {
+    //     setPage(searchParams.get("page") ?? 1)
+    // }, [window.location])
 
     if (isLoading) return <Loading />
     if (isError) return <NotFound />

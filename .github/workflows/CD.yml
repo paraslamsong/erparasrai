@@ -12,16 +12,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
+    # - name: Set up Node.js ${{ matrix.node-version }}
+    #   uses: actions/setup-node@v1
+    #   with:
+    #     node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: npm install --force
+    # - name: Install dependencies
+    #   run: npm install --force
 
-    - name: Build
-      run: npm run build
+    # - name: Build
+    #   run: npm run build
       
     - name: Deploy to server
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
