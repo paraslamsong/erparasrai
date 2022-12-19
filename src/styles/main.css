@@ -553,3 +553,29 @@ img {
 .caraousel, img {
     object-fit: cover;
 }
+
+.page-item {
+    background-color: #303030 !important;
+}
+
+.pagination {
+    --bs-pagination-bg: #303030 !important;
+
+    --bs-pagination-font-size: 1rem;
+    --bs-pagination-color: #fff !important;
+    --bs-pagination-border-width: 1px;
+    --bs-pagination-border-color: hsl(210deg 14% 89%);
+    --bs-pagination-border-radius: 0.375rem;
+    --bs-pagination-hover-color: var(--bs-link-hover-color);
+    --bs-pagination-hover-bg: hsl(210deg 16% 93%);
+    --bs-pagination-hover-border-color: hsl(210deg 14% 89%);
+    --bs-pagination-focus-color: rgb(60, 117, 68) !important;
+    --bs-pagination-focus-bg: #000 !important;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.1rem rgb(60, 117, 68) !important;
+    --bs-pagination-active-color: hsl(0deg 0% 100%);
+    --bs-pagination-active-bg: rgb(60, 117, 68) !important;
+    --bs-pagination-active-border-color: #fff !important;
+    --bs-pagination-disabled-color: rgb(156, 156, 156) !important;
+    --bs-pagination-disabled-bg: rgb(76, 76, 76) !important;
+    --bs-pagination-disabled-border-color: hsl(210deg 14% 89%);
+}

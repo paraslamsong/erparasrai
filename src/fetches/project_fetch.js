@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export async function fetchAllProjects() {
-    var response = await axios.get("https://api.erparasrai.com.np/api/projects/all/");
+export async function fetchAllProjects(page) {
+    var response = await axios.get(`https://api.erparasrai.com.np/api/projects/all/?page=${page}`);
     if (response.status === 200) {
         return response.data;
     }
