@@ -6,7 +6,7 @@ export default function Footer() {
 
     const { isLoading, data } = useQuery('social-media', fetchSocial)
 
-    const SocialLink = ({ icon, link }) => <a href={link} rel="noreferrer" target="_blank"><span className="mx-2">{icon}</span></a>
+    const SocialLink = ({ icon, link }) => <a href={link} rel="noreferrer" target="_blank" aria-label={`Click to open social profile`}><span className="mx-2">{icon}</span></a>
     return (
         <section className="footer">
             <Container>

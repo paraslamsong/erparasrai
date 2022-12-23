@@ -43,7 +43,7 @@ export default function ProjectsSection() {
                 <div style={{ width: "1.5rem" }} />
             </div>
             <Container style={{ textAlign: "center", marginTop: 30, marginBottom: 20 }}>
-                <a className="portfoliobtn" href={"/projects"}>
+                <a className="portfoliobtn" href={"/projects"} aria-label={`Click to view more projects`}>
                     More Projects
                 </a>
             </Container>
