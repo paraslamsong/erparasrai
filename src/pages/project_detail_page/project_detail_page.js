@@ -74,7 +74,7 @@ export default function ProjectDetailPage() {
         <ReactSEOMetaTags
             website={{
                 url: `${location.protocol}//${location.host}/project/${data.slug}/detail`,
-                title: data.title,
+                title: data.name,
                 datePublished: data.created_at,
                 dateModified: data.updated_at,
                 description: data.description,
@@ -100,10 +100,10 @@ export default function ProjectDetailPage() {
             }}
             blogPost={{
                 url: `${location.protocol}//${location.host}/project/${data.slug}/detail`,
-                title: data.title,
+                title: data.name,
                 description: data.description,
                 image: data.images[0],
-                imageAlt: data.title,
+                imageAlt: data.name,
                 datePublished: data.created_at,
                 dateModified: data.updated_at,
                 tags: data.tags,

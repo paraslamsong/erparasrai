@@ -81,7 +81,7 @@ export default function AlgorithmDetailPage() {
         <ReactSEOMetaTags
             website={{
                 url: `${location.protocol}//${location.host}/algorithm/${data.slug}/detail`,
-                title: data.title,
+                title: data.name,
                 datePublished: data.created_at,
                 dateModified: data.updated_at,
                 description: data.description,
@@ -107,10 +107,10 @@ export default function AlgorithmDetailPage() {
             }}
             blogPost={{
                 url: `${location.protocol}//${location.host}/algorithm/${data.slug}/detail`,
-                title: data.title,
+                title: data.name,
                 description: data.description,
 
-                imageAlt: data.title,
+                imageAlt: data.name,
                 datePublished: data.created_at,
                 dateModified: data.updated_at,
                 tags: data.tags,
