@@ -325,6 +325,8 @@ img {
     -ms-user-select: none;
     /* Internet Explorer/Edge */
     user-select: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 #bandlogo {
@@ -341,7 +343,7 @@ img {
     z-index: 999;
     padding-bottom: 20;
     border-bottom: 0.4px solid #aaaaaa;
-    color: #fff;
+    color: #fff !important;
 }
 
 .portfoliobtn:hover {
