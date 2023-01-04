@@ -14,6 +14,7 @@ export function ProPagination({ currentPage, totalPage, onPageChange }) {
             totalItemsCount={totalPage}
             pageRangeDisplayed={5}
             onChange={(page) => onPageChange(page)}
+            getPageUrl={(page) => `projects?page=${page}`}
         />
     );
 }
