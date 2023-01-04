@@ -1,4 +1,5 @@
 import { Container, Image } from "react-bootstrap";
+import FadeIn from "react-fade-in/lib/FadeIn";
 import { MetaTags } from "react-meta-tags";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
@@ -24,60 +25,62 @@ export function HobbyDetailPage() {
 
 
 
-    return <Container className="py-3 my-4">
-        <center>
-            <Image src={data.cover} style={{ maxHeight: 450 }} fluid alt={data.name} />
-        </center>
-        <div className="hobby-title my-3">
-            {data.name}
-        </div>
-        <p dangerouslySetInnerHTML={{ __html: data.content }} />
-        <MetaTags>
-            <title>{data.name} | Paras Rai</title>
-        </MetaTags>
+    return (<FadeIn>
+        <Container className="py-3 my-4">
+            <center>
+                <Image src={data.cover} style={{ maxHeight: 450 }} fluid alt={data.name} />
+            </center>
+            <div className="hobby-title my-3">
+                {data.name}
+            </div>
+            <p dangerouslySetInnerHTML={{ __html: data.content }} />
+            <MetaTags>
+                <title>{data.name} | Paras Rai</title>
+            </MetaTags>
 
 
-        <ReactSEOMetaTags
-            website={{
-                url: `${location.protocol}//${location.host}/hobby/${data.slug}/detail`,
-                title: data.name,
-                datePublished: data.created_at,
-                dateModified: data.updated_at,
-                description: data.content.replace(/(<([^>]+)>)/ig, " "),
-                language: 'en-US',
-                author: {
-                    email: 'erparasrai@gmail.com',
+            <ReactSEOMetaTags
+                website={{
+                    url: `${location.protocol}//${location.host}/hobby/${data.slug}/detail`,
+                    title: data.name,
+                    datePublished: data.created_at,
+                    dateModified: data.updated_at,
+                    description: data.content.replace(/(<([^>]+)>)/ig, " "),
+                    language: 'en-US',
+                    author: {
+                        email: 'erparasrai@gmail.com',
+                        name: 'Paras Rai',
+                    },
+                    site: {
+                        siteName: 'Paras Rai',
+                        searchUrl: `https://www.google.com/search?q=${location.host}`,
+                    }
+                }}
+                breadcrumb={[
+                    { name: 'Paras Rai', url: `${location.protocol}//${location.host}/`, },
+                    { name: data.slug, url: `${location.protocol}//${location.host}/hobby/${data.slug}/detail`, },
+                ]}
+                organization={{
                     name: 'Paras Rai',
-                },
-                site: {
-                    siteName: 'Paras Rai',
-                    searchUrl: `https://www.google.com/search?q=${location.host}`,
-                }
-            }}
-            breadcrumb={[
-                { name: 'Paras Rai', url: `${location.protocol}//${location.host}/`, },
-                { name: data.slug, url: `${location.protocol}//${location.host}/hobby/${data.slug}/detail`, },
-            ]}
-            organization={{
-                name: 'Paras Rai',
-                legalName: 'Paras',
-                url: `${location.protocol}//${location.host}/`,
-                logo: `${location.protocol}//${location.host}/`
-            }}
-            blogPost={{
-                url: `${location.protocol}//${location.host}/hobby/${data.slug}/detail`,
-                title: data.name,
-                description: data.content.replace(/(<([^>]+)>)/ig, " "),
-                image: data.cover,
-                imageAlt: data.name,
-                datePublished: data.created_at,
-                dateModified: data.updated_at,
-                tags: data.tags,
-                author: "Paras Rai",
-                publisher: "Paras Rai",
-            }}
-            facebook={{ facebookAppId: 'paraslamsong' }}
-            twitter={{ twitterUser: '@idiotcat' }}
-        />
-    </Container>
+                    legalName: 'Paras',
+                    url: `${location.protocol}//${location.host}/`,
+                    logo: `${location.protocol}//${location.host}/`
+                }}
+                blogPost={{
+                    url: `${location.protocol}//${location.host}/hobby/${data.slug}/detail`,
+                    title: data.name,
+                    description: data.content.replace(/(<([^>]+)>)/ig, " "),
+                    image: data.cover,
+                    imageAlt: data.name,
+                    datePublished: data.created_at,
+                    dateModified: data.updated_at,
+                    tags: data.tags,
+                    author: "Paras Rai",
+                    publisher: "Paras Rai",
+                }}
+                facebook={{ facebookAppId: 'paraslamsong' }}
+                twitter={{ twitterUser: '@idiotcat' }}
+            />
+        </Container>
+    </FadeIn>);
 }

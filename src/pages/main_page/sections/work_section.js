@@ -1,7 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
+import FadeIn from "react-fade-in/lib/FadeIn";
 
 export default function WorkSection() {
-    return (
+    return (<FadeIn>
         <div id='workbg'>
             <Container>
                 <Row className="align-items-center">
@@ -78,5 +79,6 @@ export default function WorkSection() {
                 </Row>
             </Container>
         </div>
+    </FadeIn>
     )
 }

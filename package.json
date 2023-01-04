@@ -23,6 +23,7 @@
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-elastic-carousel": "^0.11.5",
+    "react-fade-in": "^2.0.1",
     "react-grid-gallery": "^1.0.0",
     "react-icons": "^4.6.0",
     "react-image-lightbox": "^5.1.4",

@@ -8,7 +8,6 @@ export default function MainPage() {
 
     return (
         <>
-
             <MetaTags>
                 <title>Home | Paras Rai</title>
             </MetaTags>

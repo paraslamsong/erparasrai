@@ -1,8 +1,5 @@
 import { Image } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-
 export function HobbyCard({ hobby }) {
-
     return (
         <div className="p-2">
             <div className={`portfoliocard`}>

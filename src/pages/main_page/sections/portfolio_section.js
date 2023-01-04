@@ -2,9 +2,9 @@ import { Col, Container } from "react-bootstrap";
 import PortfolioCard from "../../../components/portfolio_card";
 import '@brainhubeu/react-carousel/lib/style.css';
 import React, { useRef, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
 import { useQuery } from "react-query";
 import { fetchFeaturedProjects } from "../../../fetches/project_fetch";
+import FadeIn from "react-fade-in/lib/FadeIn";
 
 export default function ProjectsSection() {
     const containerRef = useRef();
@@ -20,13 +20,13 @@ export default function ProjectsSection() {
 
     const { isLoading, isError, data } = useQuery('all-projects', fetchFeaturedProjects)
     if (isLoading) {
-        return <></>
+        return <div id='projects' className="projectcontainer"></div>
     }
     if (isError) {
         return <></>
     }
 
-    return (
+    return (<FadeIn>
         <div id='projects' className="projectcontainer">
             <Container className="projecttitle">
                 Portfolio
@@ -49,5 +49,6 @@ export default function ProjectsSection() {
             </Container>
 
         </div >
+    </FadeIn>
     )
 }

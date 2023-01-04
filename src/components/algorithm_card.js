@@ -1,8 +1,6 @@
 import { Image } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 
 export default function AlgorithmCard({ className, algorithm }) {
-
     const tag = (tag) => <span className="portfoliotagbox">{tag}</span>;
     return (
         <div className="p-2">

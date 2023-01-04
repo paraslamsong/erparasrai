@@ -13,6 +13,7 @@ import ReactDOMServer from "react-dom/server";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import FadeIn from "react-fade-in/lib/FadeIn";
 
 const getContactIcon = (type, size) => {
     if (type === "address") {
@@ -80,58 +81,61 @@ export default function ContactPage() {
     }
 
 
-    return (<Container>
-        <MetaTags>
-            <title>Contact | Paras Rai</title>
-        </MetaTags>
-        <Row className="m-5 ">
-            <Col md={6} sm={12}>
-                <div className="contacttitle">
-                    Message Me:
-                </div>
-                {data.map((contact) => <ContactBox title={`${contact.type.toUpperCase()}:`} value={contact.value} onClick={() => {
-                    if (contact.type === "email") {
-                        window.open(`https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${contact.value}`)
-                    }
-                }} >
-                    {getContactIcon(contact.type)}
-                </ContactBox>
-                )}
-
-                <span className="portfoliobtn" onClick={() => {
-                    setModalShow(true)
-                }}>Show CV</span>
-            </Col>
-
-            <Col md={6} sm={12}>
-                <section style={{ maxWidth: 320 }}>
-                    <form onSubmit={handleSubmit} >
-
-                        <div className="contactmessage my-4">
-                            You can leave your message here! I will reach back to you!
+    return (
+        <FadeIn>
+            <Container>
+                <MetaTags>
+                    <title>Contact | Paras Rai</title>
+                </MetaTags>
+                <Row className="m-5 ">
+                    <Col md={6} sm={12}>
+                        <div className="contacttitle">
+                            Message Me:
                         </div>
-                        <input className="contactinput" name="name" placeholder="Name" type="text" required />
-                        <input className="contactinput" name="email" placeholder="Email" type="email" required />
-                        <input className="contactinput" name="subject" placeholder="Subject" type="text" required />
-                        <textarea className="contactinput" name="message" placeholder="Message" type="text" rows={4} required >
-                        </textarea>
-                        <div style={{ height: 40 }} />
-                        <button type="submit" className="portfoliobtn text-light">Submit <svg width="16" height="16" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.34 7.32013L4.34 0.320128C3.78749 0.0451374 3.16362 -0.0527612 2.55344 0.03978C1.94326 0.132321 1.37646 0.410798 0.930335 0.837244C0.484207 1.26369 0.180456 1.81735 0.060496 2.42274C-0.059464 3.02813 0.0102046 3.65578 0.260003 4.22013L2.66 9.59013C2.71446 9.71996 2.74251 9.85934 2.74251 10.0001C2.74251 10.1409 2.71446 10.2803 2.66 10.4101L0.260003 15.7801C0.0567034 16.2368 -0.029241 16.7371 0.00998036 17.2355C0.0492018 17.7339 0.212345 18.2145 0.484585 18.6338C0.756825 19.0531 1.12953 19.3977 1.56883 19.6363C2.00812 19.875 2.50009 20 3 20.0001C3.46823 19.9955 3.92949 19.8861 4.35 19.6801L18.35 12.6801C18.8466 12.4303 19.264 12.0474 19.5557 11.5742C19.8474 11.101 20.0018 10.556 20.0018 10.0001C20.0018 9.44424 19.8474 8.89928 19.5557 8.42605C19.264 7.95282 18.8466 7.56994 18.35 7.32013H18.34ZM17.45 10.8901L3.45 17.8901C3.26617 17.9784 3.05973 18.0084 2.85839 17.976C2.65705 17.9436 2.47041 17.8504 2.32352 17.709C2.17662 17.5675 2.07648 17.3845 2.03653 17.1846C1.99658 16.9846 2.01873 16.7772 2.1 16.5901L4.49 11.2201C4.52094 11.1484 4.54766 11.075 4.57 11.0001H11.46C11.7252 11.0001 11.9796 10.8948 12.1671 10.7072C12.3546 10.5197 12.46 10.2653 12.46 10.0001C12.46 9.73491 12.3546 9.48056 12.1671 9.29302C11.9796 9.10549 11.7252 9.00013 11.46 9.00013H4.57C4.54766 8.9253 4.52094 8.85184 4.49 8.78013L2.1 3.41013C2.01873 3.22309 1.99658 3.01568 2.03653 2.8157C2.07648 2.61572 2.17662 2.43273 2.32352 2.29128C2.47041 2.14982 2.65705 2.05666 2.85839 2.02428C3.05973 1.9919 3.26617 2.02186 3.45 2.11013L17.45 9.11013C17.6138 9.19405 17.7513 9.32154 17.8473 9.47857C17.9433 9.63561 17.994 9.81608 17.994 10.0001C17.994 10.1842 17.9433 10.3647 17.8473 10.5217C17.7513 10.6787 17.6138 10.8062 17.45 10.8901Z" fill="#303030" />
-                        </svg>
-                        </button>
-                    </form>
-                    <ToastContainer />
-                </section>
-            </Col>
-        </Row>
+                        {data.map((contact) => <ContactBox title={`${contact.type.toUpperCase()}:`} value={contact.value} onClick={() => {
+                            if (contact.type === "email") {
+                                window.open(`https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${contact.value}`)
+                            }
+                        }} >
+                            {getContactIcon(contact.type)}
+                        </ContactBox>
+                        )}
 
-        <MyVerticallyCenteredModal
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-        />
+                        <span className="portfoliobtn" onClick={() => {
+                            setModalShow(true)
+                        }}>Show CV</span>
+                    </Col>
 
-    </Container>)
+                    <Col md={6} sm={12}>
+                        <section style={{ maxWidth: 320 }}>
+                            <form onSubmit={handleSubmit} >
+
+                                <div className="contactmessage my-4">
+                                    You can leave your message here! I will reach back to you!
+                                </div>
+                                <input className="contactinput" name="name" placeholder="Name" type="text" required />
+                                <input className="contactinput" name="email" placeholder="Email" type="email" required />
+                                <input className="contactinput" name="subject" placeholder="Subject" type="text" required />
+                                <textarea className="contactinput" name="message" placeholder="Message" type="text" rows={4} required >
+                                </textarea>
+                                <div style={{ height: 40 }} />
+                                <button type="submit" className="portfoliobtn text-light">Submit <svg width="16" height="16" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.34 7.32013L4.34 0.320128C3.78749 0.0451374 3.16362 -0.0527612 2.55344 0.03978C1.94326 0.132321 1.37646 0.410798 0.930335 0.837244C0.484207 1.26369 0.180456 1.81735 0.060496 2.42274C-0.059464 3.02813 0.0102046 3.65578 0.260003 4.22013L2.66 9.59013C2.71446 9.71996 2.74251 9.85934 2.74251 10.0001C2.74251 10.1409 2.71446 10.2803 2.66 10.4101L0.260003 15.7801C0.0567034 16.2368 -0.029241 16.7371 0.00998036 17.2355C0.0492018 17.7339 0.212345 18.2145 0.484585 18.6338C0.756825 19.0531 1.12953 19.3977 1.56883 19.6363C2.00812 19.875 2.50009 20 3 20.0001C3.46823 19.9955 3.92949 19.8861 4.35 19.6801L18.35 12.6801C18.8466 12.4303 19.264 12.0474 19.5557 11.5742C19.8474 11.101 20.0018 10.556 20.0018 10.0001C20.0018 9.44424 19.8474 8.89928 19.5557 8.42605C19.264 7.95282 18.8466 7.56994 18.35 7.32013H18.34ZM17.45 10.8901L3.45 17.8901C3.26617 17.9784 3.05973 18.0084 2.85839 17.976C2.65705 17.9436 2.47041 17.8504 2.32352 17.709C2.17662 17.5675 2.07648 17.3845 2.03653 17.1846C1.99658 16.9846 2.01873 16.7772 2.1 16.5901L4.49 11.2201C4.52094 11.1484 4.54766 11.075 4.57 11.0001H11.46C11.7252 11.0001 11.9796 10.8948 12.1671 10.7072C12.3546 10.5197 12.46 10.2653 12.46 10.0001C12.46 9.73491 12.3546 9.48056 12.1671 9.29302C11.9796 9.10549 11.7252 9.00013 11.46 9.00013H4.57C4.54766 8.9253 4.52094 8.85184 4.49 8.78013L2.1 3.41013C2.01873 3.22309 1.99658 3.01568 2.03653 2.8157C2.07648 2.61572 2.17662 2.43273 2.32352 2.29128C2.47041 2.14982 2.65705 2.05666 2.85839 2.02428C3.05973 1.9919 3.26617 2.02186 3.45 2.11013L17.45 9.11013C17.6138 9.19405 17.7513 9.32154 17.8473 9.47857C17.9433 9.63561 17.994 9.81608 17.994 10.0001C17.994 10.1842 17.9433 10.3647 17.8473 10.5217C17.7513 10.6787 17.6138 10.8062 17.45 10.8901Z" fill="#303030" />
+                                </svg>
+                                </button>
+                            </form>
+                            <ToastContainer />
+                        </section>
+                    </Col>
+                </Row>
+
+                <MyVerticallyCenteredModal
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                />
+
+            </Container>
+        </FadeIn>);
 }
 
 function ContactBox({ children, title, value, onClick }) {

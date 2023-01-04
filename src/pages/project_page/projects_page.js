@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Col, Container } from "react-bootstrap";
+import FadeIn from "react-fade-in/lib/FadeIn";
 import { MetaTags } from "react-meta-tags";
-import { isError, useQuery } from "react-query";
+import { useQuery } from "react-query";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Loading } from "../../components/loading";
 import { ProPagination } from "../../components/pagination";
@@ -14,16 +15,10 @@ export default function ProjectsPage() {
     const navigate = useNavigate();
     const [page, setPage] = useState(searchParams.get("page") ?? 1);
     const { isLoading, data, isError } = useQuery(`all-projects-${page}`, () => fetchAllProjects(page))
-
-    // useEffect(() => {
-    //     setPage(searchParams.get("page") ?? 1)
-    // }, [window.location])
-
     if (isLoading) return <Loading />
     if (isError) return <NotFound />
-    return (
+    return (<FadeIn>
         <Container className="projectcontainer" style={{ paddingBottom: 20, paddingTop: 20 }}>
-
             <MetaTags>
                 <title>Projects | Paras Rai</title>
             </MetaTags>
@@ -44,5 +39,6 @@ export default function ProjectsPage() {
                 }}
             />
         </Container>
+    </FadeIn>
     )
 }

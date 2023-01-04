@@ -3,8 +3,6 @@
 import Pagination from "react-js-pagination";
 
 export function ProPagination({ currentPage, totalPage, onPageChange }) {
-
-
     return (
         <Pagination
             linkClass="page-link"

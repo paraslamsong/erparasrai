@@ -1,6 +1,4 @@
 import { Image } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-
 export default function PortfolioCard({ className, project }) {
 
     const tag = (tag) => <span className="portfoliotagbox">{tag}</span>;

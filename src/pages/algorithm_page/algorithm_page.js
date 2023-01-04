@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import FadeIn from "react-fade-in/lib/FadeIn";
 import { MetaTags } from "react-meta-tags";
 import { useQuery } from "react-query";
 import AlgorithmCard from "../../components/algorithm_card";
@@ -13,19 +14,19 @@ export function AlgorithmPage() {
 
 
     if (isLoading) return <Loading />
-    return <Container>
-        <MetaTags>
-            <title>Algorithms | Paras Rai</title>
-        </MetaTags>
-        <Row className="my-4">
-            {
-                data.map((algorithm) =>
-                    <Col lg={4} md={6} sm={12} xs={12} >
-                        <AlgorithmCard algorithm={algorithm} />
-                    </Col>)
-            }
-
-        </Row>
-
-    </Container>
+    return <FadeIn>
+        <Container>
+            <MetaTags>
+                <title>Algorithms | Paras Rai</title>
+            </MetaTags>
+            <Row className="my-4">
+                {
+                    data.map((algorithm) =>
+                        <Col lg={4} md={6} sm={12} xs={12} >
+                            <AlgorithmCard algorithm={algorithm} />
+                        </Col>)
+                }
+            </Row>
+        </Container>
+    </FadeIn>
 }

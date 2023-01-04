@@ -11,6 +11,7 @@ import useDownloader from 'react-use-downloader';
 
 import '../../styles/project.css';
 import NotFound from "../not_found_page/not_found_page";
+import FadeIn from "react-fade-in/lib/FadeIn";
 export default function AlgorithmDetailPage() {
     let { slug } = useParams();
     const location = window.location
@@ -27,110 +28,109 @@ export default function AlgorithmDetailPage() {
         return <Loading />
     }
 
-    return <Container >
+    return <FadeIn>
+        <Container >
 
-        <MetaTags>
-            <title>{data.name} | Paras Rai</title>
-        </MetaTags>
-        <div style={{ height: 60 }} />
-        <center>
-            <Image className="w-100" style={{ maxWidth: 700 }} src={data.image} fluid alt={data.name} />
-        </center>
-        <div style={{ height: 30 }} />
-        {data.tags.map((tag) => <span className="tagbox">{tag}</span>)}
-        <div className="title w-100">
-            Name
-        </div>
-        <div className="body w-100" style={{ fontSize: 17, fontWeight: "bold" }}>{data.name}</div>
-        <div style={{ height: 10 }} />
-        <div className="title w-100">
-            Description
-        </div>
-        <div className="body w-100">{data.description}</div>
-        <div className="title w-100">
-            Algorithm
-        </div>
-        <div className="body w-100">
-            <ol>
-                {data.steps.map((step) => <li>{step}</li>)}
-            </ol>
-        </div>
-        <div className="title w-100">
-            Example
-        </div>
-        <div className="body w-100">{data.example_description}</div>
-
-        <center>
-            <Image className="my-2 w-100" style={{ maxWidth: 700 }} src={data.example_image} fluid alt={data.name} />
-        </center>
-        <div>
+            <MetaTags>
+                <title>{data.name} | Paras Rai</title>
+            </MetaTags>
+            <div style={{ height: 60 }} />
+            <center>
+                <Image className="w-100" style={{ maxWidth: 700 }} src={data.image} fluid alt={data.name} />
+            </center>
+            <div style={{ height: 30 }} />
+            {data.tags.map((tag) => <span className="tagbox">{tag}</span>)}
             <div className="title w-100">
-                Language
+                Name
             </div>
-
-            <div className="body w-100 my-3">{data.language}</div>
+            <div className="body w-100" style={{ fontSize: 17, fontWeight: "bold" }}>{data.name}</div>
+            <div style={{ height: 10 }} />
             <div className="title w-100">
-                Solution
+                Description
             </div>
-            <div className="body w-100 my-3">
-                <span className="portfoliobtn" onClick={() => setModalShow(true)}>View Code</span>
+            <div className="body w-100">{data.description}</div>
+            <div className="title w-100">
+                Algorithm
             </div>
+            <div className="body w-100">
+                <ol>
+                    {data.steps.map((step) => <li>{step}</li>)}
+                </ol>
+            </div>
+            <div className="title w-100">
+                Example
+            </div>
+            <div className="body w-100">{data.example_description}</div>
 
-        </div>
-        <div style={{ height: 60 }} />
-        <ReactSEOMetaTags
-            website={{
-                url: `${location.protocol}//${location.host}/algorithm/${data.slug}/detail`,
-                title: data.name,
-                datePublished: data.created_at,
-                dateModified: data.updated_at,
-                description: data.description,
-                language: 'en-US',
-                author: {
-                    email: 'erparasrai@gmail.com',
+            <center>
+                <Image className="my-2 w-100" style={{ maxWidth: 700 }} src={data.example_image} fluid alt={data.name} />
+            </center>
+            <div>
+                <div className="title w-100">
+                    Language
+                </div>
+
+                <div className="body w-100 my-3">{data.language}</div>
+                <div className="title w-100">
+                    Solution
+                </div>
+                <div className="body w-100 my-3">
+                    <span className="portfoliobtn" onClick={() => setModalShow(true)}>View Code</span>
+                </div>
+
+            </div>
+            <div style={{ height: 60 }} />
+            <ReactSEOMetaTags
+                website={{
+                    url: `${location.protocol}//${location.host}/algorithm/${data.slug}/detail`,
+                    title: data.name,
+                    datePublished: data.created_at,
+                    dateModified: data.updated_at,
+                    description: data.description,
+                    language: 'en-US',
+                    author: {
+                        email: 'erparasrai@gmail.com',
+                        name: 'Paras Rai',
+                    },
+                    site: {
+                        siteName: 'Paras Rai',
+                        searchUrl: `https://www.google.com/search?q=${location.host}`,
+                    }
+                }}
+                breadcrumb={[
+                    { name: 'Paras Rai', url: `${location.protocol}//${location.host}/`, },
+                    { name: data.slug, url: `${location.protocol}//${location.host}/algorithm/${data.slug}/detail`, },
+                ]}
+                organization={{
                     name: 'Paras Rai',
-                },
-                site: {
-                    siteName: 'Paras Rai',
-                    searchUrl: `https://www.google.com/search?q=${location.host}`,
-                }
-            }}
-            breadcrumb={[
-                { name: 'Paras Rai', url: `${location.protocol}//${location.host}/`, },
-                { name: data.slug, url: `${location.protocol}//${location.host}/algorithm/${data.slug}/detail`, },
-            ]}
-            organization={{
-                name: 'Paras Rai',
-                legalName: 'Paras',
-                url: `${location.protocol}//${location.host}/`,
-                logo: `${location.protocol}//${location.host}/`
-            }}
-            blogPost={{
-                url: `${location.protocol}//${location.host}/algorithm/${data.slug}/detail`,
-                title: data.name,
-                description: data.description,
+                    legalName: 'Paras',
+                    url: `${location.protocol}//${location.host}/`,
+                    logo: `${location.protocol}//${location.host}/`
+                }}
+                blogPost={{
+                    url: `${location.protocol}//${location.host}/algorithm/${data.slug}/detail`,
+                    title: data.name,
+                    description: data.description,
 
-                imageAlt: data.name,
-                datePublished: data.created_at,
-                dateModified: data.updated_at,
-                tags: data.tags,
-                author: "Paras Rai",
-                publisher: "Paras Rai",
-            }}
-            facebook={{ facebookAppId: 'paraslamsong' }}
-            twitter={{ twitterUser: '@idiotcat' }}
-        />
-
-
-        <MyVerticallyCenteredModal
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-            code={data.solution}
-            file={data.file}
-            file_name={data.file_name}
-        />
-
-    </Container>
+                    imageAlt: data.name,
+                    datePublished: data.created_at,
+                    dateModified: data.updated_at,
+                    tags: data.tags,
+                    author: "Paras Rai",
+                    publisher: "Paras Rai",
+                }}
+                facebook={{ facebookAppId: 'paraslamsong' }}
+                twitter={{ twitterUser: '@idiotcat' }}
+            />
+            <MyVerticallyCenteredModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                code={data.solution}
+                file={data.file}
+                file_name={data.file_name}
+            />
+        </Container>
+    </FadeIn>
 }
 
 
