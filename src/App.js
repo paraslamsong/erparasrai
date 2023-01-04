@@ -18,7 +18,7 @@ import { HobbiesPage } from './pages/hobbies_page/hobbies_page';
 import { HobbyDetailPage } from './pages/hobby_detail_page/hobby_detail_page';
 import { useEffect } from 'react';
 
-const queryClient = new QueryClient()
+export const queryClient = new QueryClient()
 
 function Navigation() {
   const location = useLocation();

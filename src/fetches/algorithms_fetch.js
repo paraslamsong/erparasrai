@@ -1,8 +1,8 @@
 import axios from "axios";
-
 export async function fetchAlgorithms() {
     var response = await axios.get("https://api.erparasrai.com.np/api/algorithm/all/");
     if (response.status === 200) {
+
         return response.data;
     }
 }

@@ -3,6 +3,7 @@ import axios from "axios";
 export async function fetchAbout() {
     var response = await axios.get("https://api.erparasrai.com.np/api/about/");
     if (response.status === 200) {
+
         return response.data;
     }
 }
