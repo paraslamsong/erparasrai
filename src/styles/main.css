@@ -354,10 +354,10 @@ img {
 }
 
 .portfoliobtn:hover {
-    border: 0.0625rem solid #000;
+    border: 0.0625rem solid #FFF;
     border-radius: 0.25rem;
     color: #FFFFFF;
-    background-color: #000;
+    background-color: rgb(131, 3, 3);
     cursor: pointer;
 }
 
@@ -435,7 +435,7 @@ img {
 
 .nav-link>a:hover {
     color: #fff;
-    background-color: #000;
+    background-color: rgb(131, 3, 3);
 }
 
 .active {
