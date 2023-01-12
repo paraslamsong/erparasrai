@@ -40,12 +40,12 @@ export default function Footer() {
                             <SocialLink
                                 link={social.link}
                                 icon={
-                                    <img className="white-icon" width={28} height={28} alt={social.media} src={getIcon(social.media)} />
+                                    <img className="white-icon social-icon" alt={social.media} src={getIcon(social.media)} />
                                 } />
                         )}
                     </Col>
                     <Col md={6}>
-                        <div className='d-flex justify-content-md-start justify-content-sm-center justify-content-center my-2'>
+                        <div className='d-flex justify-content-md-start justify-content-sm-center justify-content-center my-3'>
                             Copyright© {(new Date()).getFullYear()}
                         </div>
                     </Col>
