@@ -9,9 +9,7 @@ export default function WorkSection() {
                     <Col md={6} sm={12} style={{ paddingRight: 170 }}>
                         <div id="worktitle">Work</div>
                         <div id="workinformation">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum. Suspendis imperdiet,
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non.
-                        </div>
+                            Computer engineering is a field of engineering that combines the principles of computer science and electrical engineering to design and develop computer systems and networks.<br /><br />Computer engineers design and develop the software and hardware components of computers and computer-controlled equipment, such as routers, smartphones, and other devices</div>
                     </Col>
 
                     <Col md={6} sm={12}>
@@ -27,7 +25,7 @@ export default function WorkSection() {
                                     1. Research
                                 </div>
                                 <div className="workbody">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.
+                                    Research on software design and architecture and project requirements.
                                 </div>
                             </Col>
                             <div style={{ width: "1.5rem" }} />
@@ -42,7 +40,7 @@ export default function WorkSection() {
                                     2. Analyze
                                 </div>
                                 <div className="workbody">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.
+                                    Involves analysis of development challenges and proper solution to the project.
                                 </div>
                             </Col>
                         </Row>
@@ -57,7 +55,7 @@ export default function WorkSection() {
                                     2. Design
                                 </div>
                                 <div className="workbody">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.
+                                    Design includes drafting solution with UMLs and fontend designs.
                                 </div>
                             </Col>
                             <div style={{ width: "1.5rem" }} />
@@ -71,7 +69,7 @@ export default function WorkSection() {
                                     4. Launch
                                 </div>
                                 <div className="workbody">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.
+                                    Launching project to public and making project available to use.
                                 </div>
                             </Col>
                         </Row>
