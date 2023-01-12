@@ -2,7 +2,7 @@
 
 @media only screen and (max-width: 600px) {
     html {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -312,7 +312,7 @@ img {
 
 .portfoliobtn {
     background: #666666;
-    padding: 0.75rem 1.25rem;
+    padding: 0.5rem 1rem;
     border: 0.0625rem solid #000;
     border-radius: 0.25rem;
     font-family: 'Work Sans';
