@@ -40,7 +40,7 @@ export default function Footer() {
                             <SocialLink
                                 link={social.link}
                                 icon={
-                                    <img className="white-icon" height="28" alt={social.media} src={getIcon(social.media)} />
+                                    <img className="white-icon" width={28} height={28} alt={social.media} src={getIcon(social.media)} />
                                 } />
                         )}
                     </Col>
