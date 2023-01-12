@@ -188,7 +188,7 @@ img {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.5rem;
     color: #cdcdcd;
 }
@@ -262,7 +262,7 @@ img {
     border-radius: 0.375rem;
     color: #F0F1F3;
     margin-right: 0.1875rem;
-    font-size: 0.625rem;
+    font-size: 1rem;
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 500;
@@ -302,7 +302,7 @@ img {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.25rem;
     flex: 1;
 
@@ -318,7 +318,7 @@ img {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 0.8125rem;
+    font-size: 1rem;
     line-height: 1.5rem;
     cursor: pointer;
     -webkit-touch-callout: none;
@@ -384,7 +384,7 @@ img {
     padding-bottom: 50px;
     background: #303030;
     color: #F0F1F3;
-    font-size: 0.8125rem;
+    font-size: 1rem;
 }
 
 .projectbox {
