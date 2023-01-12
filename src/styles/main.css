@@ -11,7 +11,7 @@ html {
     -ms-user-select: none;
     user-select: none;
     scroll-behavior: smooth;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 img {
